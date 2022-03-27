@@ -170,8 +170,8 @@ $\mu$和$\sigma^{2}$更加准确可靠，而足够大的数据量能够使用于
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\linewidth]{figures/arch.png}
-  \caption{StochNorm的整体结构}
+  \includegraphics[width=0.7\linewidth]{figures/arch2.png}
+  \caption{StochNorm的结构示意图}
   \label{fig:arch}
 \end{figure}
 
@@ -266,18 +266,31 @@ StochNorm则通过结构上的巧妙设计，隐式地提升了深度神经网�
 便可以同时获得两种正则化效果，进一步提升模型的最终效果，在节~\ref{section:ablation}中有更详细的实验验证。
 
 \textbf{与主流深度神经网络结构相结合 } 作为一种通用并且轻量的标准化层结构，StochNorm可以被非常轻松地加入各种主流的使用了BatchNorm的深度神经网络结构中，只需要直接将BatchNorm替换为StochNorm即可。
-如图~\ref{fig:integratio}所示，StochNorm可以应用在多种主流深度神经网络结构中，如VGG-16~\citep{simonyan2015very}，ResNet~\citep{he2016deep}以及Inception Net~\citep{szegedy2016rethinking}，
+如图~\ref{fig:integratio}所示，StochNorm可以应用在多种主流深度神经网络结构中，如VGG~\citep{simonyan2015very}，ResNet~\citep{he2016deep}以及Inception Net~\citep{szegedy2016rethinking}，
 而不需要修改其他组件。
+
+% \begin{figure}
+%   \centering
+%   \subcaptionbox{VGG Block}
+%     {\includegraphics[width=0.16\linewidth]{figures/vgg-block.png}}
+%   \hspace{15pt}
+%   \subcaptionbox{Residual Block}
+%     {\includegraphics[width=0.29\linewidth]{figures/resnet-block.png}}
+%   \subcaptionbox{Inception Block}
+%     {\includegraphics[width=0.44\linewidth]{figures/inception-block.png}}
+%   \caption{在主流深度神经网络结构中使用StochNorm}
+%   \label{fig:integratio}
+% \end{figure}
 
 \begin{figure}
   \centering
   \subcaptionbox{VGG Block}
-    {\includegraphics[width=0.16\linewidth]{figures/vgg-block.png}}
+    {\includegraphics[width=0.16\linewidth]{figures/cnn.png}}
   \hspace{15pt}
   \subcaptionbox{Residual Block}
-    {\includegraphics[width=0.29\linewidth]{figures/resnet-block.png}}
+    {\includegraphics[width=0.29\linewidth]{figures/resnet.png}}
   \subcaptionbox{Inception Block}
-    {\includegraphics[width=0.44\linewidth]{figures/inception-block.png}}
+    {\includegraphics[width=0.44\linewidth]{figures/inception.png}}
   \caption{在主流深度神经网络结构中使用StochNorm}
   \label{fig:integratio}
 \end{figure}
@@ -439,11 +452,11 @@ PyTorch使用了动态的计算图，使用方法很接近原生的Python语言�
 \begin{figure}
   \centering
   \subcaptionbox{使用不同的网络结构中\label{fig:backbone}}
-    {\includegraphics[width=0.48\linewidth]{figures/backbone.pdf}}
+    {\includegraphics[width=0.48\linewidth]{figures/backbone.png}}
   \subcaptionbox{使用不同的初始化方法\label{fig:method}}
-    {\includegraphics[width=0.48\linewidth]{figures/method.pdf}}
+    {\includegraphics[width=0.48\linewidth]{figures/method.png}}
   \subcaptionbox{使用不同的分支选取概率\label{fig:p_acc}}
-    {\includegraphics[width=0.48\linewidth]{figures/p_acc.pdf}}
+    {\includegraphics[width=0.48\linewidth]{figures/p_acc.png}}
   \caption{分析实验}
 \end{figure}
 
@@ -465,7 +478,7 @@ PyTorch使用了动态的计算图，使用方法很接近原生的Python语言�
 
 % \begin{figure}
 %   \centering
-%   \includegraphics[width=0.5\linewidth]{figures/p_acc.pdf}
+%   \includegraphics[width=0.5\linewidth]{figures/p_acc.png}
 %   \caption{StochNorm中超参数$p$的选取对效果的影响}
 %   \label{fig:p_acc}
 % \end{figure}

@@ -73,7 +73,7 @@
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{figures/cotuning.pdf}
+    \includegraphics[width=\linewidth]{figures/cotuning.png}
     \caption{Co-Tuning的示意图~\citep{you2020co}}
     \label{fig:cotuning}
 \end{figure}
@@ -91,7 +91,7 @@ Co-Tuning~\citep{you2020co}则直接利用预训练模型分类器中的知识�
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{figures/delta.pdf}
+    \includegraphics[width=0.8\linewidth]{figures/delta.png}
     \caption{DELTA的示意图~\citep{li2018delta}}
     \label{fig:delta}
 \end{figure}
@@ -124,7 +124,7 @@ Chen等人的工作~\citep{chen2018encoder}则提供了在语义分割上预训�
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{figures/zootuning.pdf}
+    \includegraphics[width=0.8\linewidth]{figures/zootuning.png}
     \caption{Zoo-Tuning的示意图~\citep{shu2021zoo}}
     \label{fig:zoo}
 \end{figure}
@@ -143,11 +143,11 @@ Chen等人的工作~\citep{chen2018encoder}则提供了在语义分割上预训�
 Boyd等人的工作~\citep{boyd_convex_2004}发现，对输入进行标准化能够对深度神经网络的训练起到帮助，是因为诸如随机梯度下降（Stochastic Gradient Descent，SGD）的一阶优化算法在目标函数曲面更加平滑时效果更好。随后
 Ioffe等人的工作~\citep{ioffe2015BN}则提出了批标准化（Batch Normalization）的算法，对网络的输入根据其均值和方差进行标准化，很大程度下帮助了深度神经网络的训练。受BatchNorm的启发，现在深度学习工作中出现了越来越多
 的标准化层技巧。层标准化（Layer Normalization）\citep{lei2016LayerNorm}和循环批标准化（Recurrent Batch Normalization）\citep{cooijmans2016recurrent}在循环神经网络的训练中非常有效；组标准化（Group Normalization）
-\citep{wu2018GroupNorm}则是为目标检测任务专门设计的；实例标准化（InstanceNormalization）\citep{ulyanov_instance_2016}则提升了风格迁移（Style Transfer）任务。
+\citep{wu2018GroupNorm}则是为目标检测任务专门设计的；实例标准化（InstanceNormalization）\citep{ulyanov_instance_2016}则提升了风格迁移（Style Transfer）任务的效果。
 图~\ref{fig:norm}中展示了这其中的几种标准化层结构的区别。
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{figures/norm.pdf}
+    \includegraphics[width=\linewidth]{figures/norm.png}
     \caption{几种标准化层的示意图~\citep{wu2018GroupNorm}}
     \label{fig:norm}
 \end{figure}
